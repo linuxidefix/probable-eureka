@@ -6335,9 +6335,12 @@ __nccwpck_require__.r(__webpack_exports__);
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('who-to-greet');
+  const version = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('version');
+  const newVersion = version + 1;
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
   (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput)("time", time);
+  (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput)("newVersion", newVersion);
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
