@@ -18,4 +18,4 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Get the output newVersion
-        run: echo "The newVersion is ${{ steps.hello.outputs.time }}"
+        run: echo "The newVersion is ${{ steps.hello.outputs.newVersion }}"
