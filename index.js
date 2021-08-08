@@ -5,7 +5,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = getInput('who-to-greet');
   const version = getInput('version');
-  const newVersion = version + 1;
+  const newVersion = new Number(version).valueOf + 1;
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
   setOutput("time", time);
